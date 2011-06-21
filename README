@@ -1,0 +1,51 @@
+Installation Notes
+==================
+
+Download latest snapshot from:
+https://github.com/b4winckler/macvim/downloads
+
+Create a symbolic link to your vimrc file
+ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
+
+Installing Command-T
+====================
+
+Note: If you are an RVM user, you must perform the build using the same
+version of Ruby that Vim itself is linked against. This will often be the
+system Ruby, which can be selected before issuing the "make" command with:
+
+rvm use system
+
+Download
+http://www.vim.org/scripts/script.php?script_id=3025
+Locate the file command-t-1.2.1.vba
+vim command-t-1.2.1.vba
+so %
+
+cd ~/.vim/ruby/command-t
+ruby extconf.rb
+make
+
+=====================
+
+My Vim bundle for Rails development.
+
+Plugins:
+- AutoClose
+- CommandT
+- TComment
+- NerdTree
+- bufexplorer
+- endwise
+- rails
+- sessions
+- snipMate
+- surround
+- tagbar
+- scss-syntax
+- vim-coffee-script
+
+--------------------------
+
+Credit to https://github.com/carlhuda/janus for themes
