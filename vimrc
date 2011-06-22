@@ -37,7 +37,7 @@ set guioptions-=T
 color railscasts+
 
 " Command-/ to toggle comments
-map <D-/> :TComment<CR>
+map <D-/> :TComment<CR>j
 
 " Remember last location in file
 if has("autocmd")
