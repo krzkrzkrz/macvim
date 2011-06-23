@@ -16,8 +16,10 @@ set guicursor+=a:blinkon0
 set nowrap
 set tabstop=2
 set shiftwidth=2
-set smartindent
 set expandtab
+set cindent
+set smartindent
+set autoindent
 set list listchars=tab:\ \ ,trail:·
 
 " Searching
