@@ -98,3 +98,5 @@ au FileType html,eruby,rb,css,js,xml runtime! macros/matchit.vim
 set backupdir=~/.vim/tmp/backup
 set directory=~/.vim/tmp/swp
 
+" Detect if a tab was closed, and ensure that height of main window fills the screen (100% height)
+au TabEnter * let &lines = 100
