@@ -49,7 +49,7 @@ if has("autocmd")
 endif
 
 " Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
 
 " Open split buffers below instead of above current buffer
 set splitbelow
