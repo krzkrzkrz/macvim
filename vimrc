@@ -70,7 +70,8 @@ nmap <leader>rv :Rview
 nmap <leader>rm :Rmodel 
 
 " Open up side panel left (NERDTree) and right(Tagbar)
-nmap <leader>\ :NERDTreeToggle<CR> :TagbarToggle<CR>
+" nmap <leader>\ :NERDTreeToggle<CR> :TagbarToggle<CR>
+nmap <leader>\ :call ToggleNERDTreeAndTagbar()<CR>
 
 " Allow single click for NERDTree
 let NERDTreeMouseMode = 3
@@ -100,3 +101,41 @@ set directory=~/.vim/tmp/swp
 
 " Detect if a tab was closed, and ensure that height of main window fills the screen (100% height)
 au TabEnter * let &lines = 100
+
+" <leader>\ to open or close NERDTree and Tagbar, under the following conditions:
+" 1) Only close both if NERDTree and Tagbar are both opened
+" 2) Open both if NERDTree and Tagbar are closed OR if one is already opened
+function! ToggleNERDTreeAndTagbar()
+  let w:jumpbacktohere = 1
+
+  " Detect which plugins are open
+  if exists('t:NERDTreeBufName')
+      let nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
+  else
+      let nerdtree_open = 0
+  endif
+  let tagbar_open = bufwinnr('__Tagbar__') != -1
+
+  " Perform the appropriate action
+  if nerdtree_open && tagbar_open
+      NERDTreeClose
+      TagbarClose
+  elseif nerdtree_open
+      TagbarOpen
+  elseif tagbar_open
+      NERDTree
+  else
+      NERDTree
+      TagbarOpen
+  endif
+
+  " Jump back to the original window
+  for window in range(1, winnr('$'))
+    execute window . 'wincmd w'
+    if exists('w:jumpbacktohere')
+      unlet w:jumpbacktohere
+      break
+    endif
+  endfor
+endfunction
+
