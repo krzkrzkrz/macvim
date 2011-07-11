@@ -69,6 +69,10 @@ nmap <leader>rc :Rcontroller
 nmap <leader>rv :Rview 
 nmap <leader>rm :Rmodel 
 
+" Tab completion
+" Also needed for better Rails navigation auto-completion
+set wildmode=list:longest,list:full
+
 " Open up side panel left (NERDTree) and right(Tagbar)
 " nmap <leader>\ :NERDTreeToggle<CR> :TagbarToggle<CR>
 nmap <leader>\ :call ToggleNERDTreeAndTagbar()<CR>
