@@ -17,8 +17,8 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set cindent
-set smartindent
+" set cindent             " Disable for now because >> doesnt not indent lines, if starting char is #
+" set smartindent         " Disable for now because >> doesnt not indent lines, if starting char is #
 set autoindent
 set list listchars=tab:\ \ ,trail:·
 
