@@ -40,7 +40,7 @@ Plugins:
 - endwise
 - rails
 - sessions
-- snipMate
+- UltiSnips
 - surround
 - tagbar
 - scss-syntax
