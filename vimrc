@@ -3,6 +3,9 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 set nocompatible
+filetype plugin on
+
+let g:xptemplate_key = '<Tab>'
 
 set number
 set ruler

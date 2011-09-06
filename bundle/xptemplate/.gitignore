@@ -1,0 +1,8 @@
+tags
+*.xpt.vimc
+.*.un~
+*~
+.svn/
+src/personal/
+xpt/
+xpt-*.tgz
