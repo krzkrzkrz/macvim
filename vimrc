@@ -97,7 +97,9 @@ set equalalways
 " Don't need to add this onto pathogen bundle folder. We only need
 " to configure it.
 " Configure matchit so that it goes from opening tag to closing tag
-au FileType html,eruby,rb,css,js,xml runtime! macros/matchit.vim
+" au FileType html,eruby,rb,css,js,xml runtime! macros/matchit.vim
+" % to bounce from do to end etc.
+runtime! macros/matchit.vim
 
 " Set backup and swp dir. Don't forget to clear tmp dir out once in a while
 set backupdir=~/.vim/tmp/backup

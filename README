@@ -32,7 +32,7 @@ make
 My Vim bundle for Rails development.
 
 Plugins:
-- AutoClose
+- delimitMate
 - CommandT
 - TComment
 - NerdTree
